@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+
+<p> <%= startingContent %></p>
+
+<% post.forEach(function(post){ %>
+  <h1> <%= post.blogTitle %> </h1>
+<p> <%= post.blogContent.substring(0,99) + "..."  %>
+  <a href="/posts/<%= post._id %>">Read more</a> </p>
+<% }); %>
+<%- include("partials/footer") -%>
