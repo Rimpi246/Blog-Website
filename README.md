@@ -1,3 +1,3 @@
 https://immense-thicket-59592.herokuapp.com/
 
-This is an assignment as a part of an online course I did.
+A blog website which allows view and creation of blogs and saving it to database(MongoDB).
