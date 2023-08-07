@@ -1,5 +1,5 @@
 //jshint esversion:6
-require('dotenv').config()
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -20,15 +20,15 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-
-mongoose.connect(
-  process.env.MONGODB_URL, {
+mongoose
+  .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-    useCreateIndex: true,}
-).then(() => console.log('Connected to mongo server'))
-.catch((err) => console.error(err));
+    useCreateIndex: true,
+  })
+  .then(() => console.log("Connected to mongo server"))
+  .catch((err) => console.error(err));
 const blogsSchema = new mongoose.Schema({
   blogTitle: String,
   blogContent: String,
@@ -90,6 +90,7 @@ let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }
+// Listening to server
 app.listen(port, function () {
   console.log("Server has started successfully");
 });
