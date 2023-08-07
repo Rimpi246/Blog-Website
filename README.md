@@ -1,1 +1,0 @@
-This is an assignment as a part of an online course I did.
